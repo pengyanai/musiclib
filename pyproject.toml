@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musiclib"
+version = "0.1.0"
+description = "Read an iPod library, transcode, import into Apple Music, add lyrics, scrub download-site tags"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "pengyanai" }]
+keywords = ["apple-music", "itunes", "ipod", "music", "macos", "automation"]
+classifiers = [
+    "Environment :: MacOS X",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio",
+]
+
+[project.urls]
+Homepage = "https://github.com/pengyanai/musiclib"
+
+[tool.setuptools.packages.find]
+include = ["musiclib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
